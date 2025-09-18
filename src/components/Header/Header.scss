@@ -4,7 +4,9 @@
 
 
 .header {
-    @include flex-center(row, space-between);
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
     margin: 20px 40px;
     padding: 16px 8px;
 }

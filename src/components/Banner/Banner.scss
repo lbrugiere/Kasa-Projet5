@@ -8,11 +8,8 @@
     background-size: cover;
     background-position: center;
     box-shadow: 0px 4px 4px 0px #00000040;
-    ;
     border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     
     &::after {
         content: "";
@@ -29,5 +26,6 @@
         color: $secondary-color;
         text-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         text-align: center;
+        -webkit-text-stroke: 1px $tertiary-color;
     }
 }
