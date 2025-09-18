@@ -1,3 +1,8 @@
+import Banner from '../../components/Banner/Banner';
+import imgHomeBanner from '../../assets/images/banner-home.png';
+
 export default function Home() {
-    return <h1>Bienvenue sur Home</h1>;
+    return (
+        <Banner  text='Chez vous, partout et ailleurs' image={imgHomeBanner} />
+    )
 }
