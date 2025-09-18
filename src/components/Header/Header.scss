@@ -1,0 +1,27 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+
+
+.header {
+    @include flex-center(row, space-between);
+    margin: 20px 40px;
+    padding: 16px 8px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;    
+
+    &_link-about, &_link-home {
+        @include font(24px, 500);
+        text-decoration: none;
+        color: $tertiary-color;
+        text-align: end;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
