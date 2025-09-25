@@ -1,0 +1,24 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.error-container {
+    @include flex-column;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 50px;
+
+    h2 {
+        @include font(230px, 700);
+        color: $primary-color;
+    }
+
+    p {
+        @include font(36px, 500);
+        color: $primary-color;
+    }
+
+    a{
+        @include font(18px, 500);
+        color: $tertiary-color;
+    }
+}
