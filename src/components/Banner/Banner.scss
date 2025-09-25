@@ -10,6 +10,7 @@
     box-shadow: 0px 4px 4px 0px #00000040;
     border-radius: 25px;
     @include flex-center;
+    margin-bottom: 15px;
     
     &::after {
         content: "";
