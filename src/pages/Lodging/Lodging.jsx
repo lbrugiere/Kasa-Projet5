@@ -1,12 +1,14 @@
+import "../Lodging/Lodging.scss";
+import lodgings from "../../assets/data/lodgings.json";
+import Carrousel from "../../components/Carrousel/Carrousel.jsx";
 import { useParams } from "react-router-dom";
 
 export default function Lodging() {
     const { id } = useParams();
-
+    const lodging = lodgings.find(lodging => lodging.id === id);
     return (
         <div>
-            <h1>Page Lodging</h1>
-            <p>Logement ID : {id}</p>
+            <Carrousel slides={lodging.pictures} />
         </div>
     );
 }

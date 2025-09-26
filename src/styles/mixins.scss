@@ -17,3 +17,11 @@
     line-height: 142%;
 }
 
+@mixin chevron {
+    position: absolute;
+    font-size: 60px;
+    top: 50%;
+    cursor: pointer;
+    color: $secondary-color;
+    transform: translateY(-50%);
+}
