@@ -1,3 +1,17 @@
 @import '../../styles/mixins.scss';
 @import '../../styles/variables.scss';
 
+.host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    p {
+        @include font(18px, 500);
+        color: $primary-color;
+    }
+
+    img {
+        border-radius: 90px;
+    }
+}
