@@ -1,4 +1,6 @@
 import "../Rate/Rate.scss";
+import emptyStar from "../../assets/logos/empty-star.png";
+import fullStar from "../../assets/logos/full-star.png";
 
 export default function Rate(props) {
     const score = props.score;
@@ -6,8 +8,9 @@ export default function Rate(props) {
     return(
         <div className="rate-container">
             {notes.map((note) => 
-                note <= score ?( <i className="fa-solid fa-star" />)
-                : ( <i className="fa-regular fa-star" />)
+                note <= score ?( 
+                <img key={note} src={fullStar} alt="Étoile pleine"/>)
+                : ( <img key={note} src={emptyStar} alt="Étoile vide" />)
         )}
         </div>
     )
