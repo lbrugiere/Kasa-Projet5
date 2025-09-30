@@ -32,4 +32,17 @@
         @include chevron;
         right: 3%;
     }
+
+    @media (max-width: 375px) {
+        height: 255px;
+
+        img {
+            height: 255px;
+            border-radius: 10px;
+        };
+
+        p {
+            display: none;
+        }
+    }
 }

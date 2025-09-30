@@ -24,4 +24,8 @@
     cursor: pointer;
     color: $secondary-color;
     transform: translateY(-50%);
+
+    @media (max-width: 375px) {
+        font-size: 24px;
+    }
 }

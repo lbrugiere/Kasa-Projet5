@@ -23,38 +23,34 @@ export default function Lodging() {
         );
     });
 
-    return lodging ? (
+    if (!lodging) {
+        return < Navigate to="/error"/>
+    } 
+
+    return (
         <>
         <Carrousel slides={lodging.pictures} />
-        <section>
+        <section className="info">
             <div className="description-info">
-                <div>
-                    <h2>{lodging?.title}</h2>
-                    <p>{lodging?.location}</p>
-                </div>
-                <div>
-                    {tags}
-                </div>
+                    <h2>{lodging.title}</h2>
+                    <p>{lodging.location}</p>
+                    <div className="tag">
+                        {tags}
+                    </div>
             </div>
 
             <div className="host-rate">
-                <div>
                     <Host 
-                    name={lodging?.host.name}
-                    picture={lodging?.host.picture}
+                    name={lodging.host.name}
+                    picture={lodging.host.picture}
                     />
-                </div>
-                <div>
                     <Rate score={lodging.rating} />
-                </div>
             </div>
         </section>
-        <div className="collapse-info">
-            <Collapse title="Description" content={lodging.description}/>
-            <Collapse title="Équipements" content={<ul>{equipments}</ul>}/>
+        <div className="collapse-container">
+            <Collapse className="collapse_item" title="Description" content={lodging.description}/>
+            <Collapse className="collapse_item" title="Équipements" content={<ul>{equipments}</ul>}/>
         </div>
         </>
-    ) : (
-        <Navigate to="/Error" />
     );
 }

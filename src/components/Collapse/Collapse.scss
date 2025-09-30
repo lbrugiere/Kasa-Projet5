@@ -2,7 +2,14 @@
 @import '../../styles/variables.scss';
 
 .collapse {
-    margin: 30px 0;
+    margin: 0;
+    width: 100%;
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
    &_title {
     color: $secondary-color;
@@ -27,7 +34,7 @@
           transform: rotate(-180deg);
     }
    }
-}
+  }
 
    &_content {
     background-color: $quaternary-color;
@@ -44,5 +51,26 @@
       opacity: 1;
     }
    }
+
+   @media (max-width: 375px) {
+
+    margin: 10px 0;
+
+    &_title {
+      padding: 5px 10px;
+    }
+
+    h2{
+      @include font(13px, 600);
+    }
+
+    i {
+      font-size: 16px;
+    }
+
+    &_content {
+      @include font(12px, 400);
+    }
+ }
 }
 

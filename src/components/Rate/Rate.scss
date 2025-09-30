@@ -4,4 +4,12 @@
 .rate-container {
     display: flex;
     gap: 10px;
+
+    @media (max-width:375px) {
+        gap: 6px;
+        
+        img {
+            width: 18px;
+        }
+    }
 }

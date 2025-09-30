@@ -18,4 +18,14 @@ footer {
         color: $secondary-color;
         @include font(24px, 500);
     }
+
+    @media (max-width: 375px) {
+        gap: 15px;
+
+        p {
+            @include font(12px, 500);
+            width: 133px;
+            text-align: center;
+        }
+    }
 }

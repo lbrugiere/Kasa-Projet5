@@ -9,9 +9,24 @@
     p {
         @include font(18px, 500);
         color: $primary-color;
+        text-align: right;
+        white-space: normal;  
+        max-width: 90px;
     }
 
     img {
         border-radius: 90px;
+        width: 64px;
+    }
+
+    @media (max-width:375px) {
+        p {
+            @include font(12px, 500);
+            max-width: 50px;
+        }
+
+        img {
+            width: 32px;
+        }
     }
 }

@@ -13,7 +13,7 @@ export default function Collapse({ title , content }) {
                 onClick={ () => setIsOpen(!isOpen)}
                 className={`fa-solid fa-chevron-up ${isOpen ? "rotate" : ""}`}></i>
             </div>
-            <div className={isOpen ? "collapse_content open" : "collapse_content"}>
+            <div className={`collapse_content ${isOpen ? "open" : ""}`}>
             {isOpen && <p>{content}</p>}
             </div>
         </div>

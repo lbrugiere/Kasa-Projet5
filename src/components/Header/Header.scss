@@ -9,6 +9,17 @@
 	align-items: center;
     margin: 20px 40px;
     padding: 16px 8px;
+
+    @media (max-width: 375px) {
+        margin: 5px 10px;
+        padding: 12px 8px;
+
+       &_fig img {
+         width: 145px;
+        } 
+    }
+
+    
 }
 
 .nav {
@@ -24,6 +35,15 @@
 
         &:hover {
             text-decoration: underline;
+        }
+
+        &.active {
+            text-decoration: underline;
+        } 
+        
+        @media (max-width: 375px) {
+            @include font(12px, 500);
+            text-transform: uppercase;
         }
     }
 }
