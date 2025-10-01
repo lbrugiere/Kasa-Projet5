@@ -44,7 +44,7 @@
     max-height: 0;
     transition: max-height 0.5s linear, padding 0.5s linear;
 
-    p {
+    div {
       margin: 0;
       transform: translateY(-100%);
       opacity: 0;
@@ -55,7 +55,7 @@
       padding: 15px;
       max-height: 500px;
 
-      p {
+      div {
         transform: translateY(0);
         opacity: 1;
       }
