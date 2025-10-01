@@ -9,7 +9,7 @@
 main {
     margin: 20px 100px;
 
-    @media (width <= 375px) {
+    @media (max-width: 375px) {
          margin: 10px 20px;
       }
 }
