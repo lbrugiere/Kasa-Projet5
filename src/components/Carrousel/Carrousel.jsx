@@ -23,5 +23,5 @@ export default function Carrousel({slides}) {
                 <i onClick={nextSlide} className="fa-solid fa-chevron-right"></i>
             )}
         </div>
-    )
+    );
 }

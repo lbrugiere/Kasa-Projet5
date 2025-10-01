@@ -1,9 +1,9 @@
-import Banner from '../../components/Banner/Banner';
-import imgHomeBanner from '../../assets/images/banner-home.png';
-import lodgings from '../../assets/data/lodgings.json';
-import Card from '../../components/Card/Card';
-import { Link } from 'react-router-dom';
-import '../Home/Home.scss';
+import Banner from "../../components/Banner/Banner";
+import imgHomeBanner from "../../assets/images/banner-home.png";
+import lodgings from "../../assets/data/lodgings.json";
+import Card from "../../components/Card/Card";
+import { Link } from "react-router-dom";
+import "../Home/Home.scss";
 
 export default function Home() {
     return (
@@ -19,5 +19,5 @@ export default function Home() {
             ))}
         </section>
         </>
-    )
+    );
 }

@@ -13,5 +13,5 @@ export default function Rate(props) {
                 : ( <img key={note} src={emptyStar} alt="Étoile vide" />)
         )}
         </div>
-    )
+    );
 }

@@ -1,17 +1,17 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 .collapse {
-    margin: 0;
-    width: 100%;
-  
+  margin: 0;
+  width: 100%;
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-   &_title {
+  &_title {
     color: $secondary-color;
     display: flex;
     flex-direction: row;
@@ -21,46 +21,55 @@
     padding: 7px 15px;
     border-radius: 5px;
 
-    h2{
-      @include font(24px, 600);  
-    };
+    h2 {
+      @include font(24px, 600);
+    }
 
     i {
-        font-size: 30px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+      font-size: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
 
-        &.rotate {
-          transform: rotate(-180deg);
+      &.rotate {
+        transform: rotate(-180deg);
+      }
     }
-   }
   }
 
-   &_content {
+  &_content {
     background-color: $quaternary-color;
     border-radius: 5px;
-    padding: 0 10px;
-    max-height: 0;
-    opacity: 0;
+    padding: 0 15px;
     overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
-  
-    &.open {
-      padding: 10px;
-      max-height: 500px;
-      opacity: 1;
+    max-height: 0;
+    transition: max-height 0.5s linear, padding 0.5s linear;
+
+    p {
+      margin: 0;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.5s linear, opacity 0.5s linear;
     }
-   }
 
-   @media (max-width: 375px) {
+    &.open {
+      padding: 15px;
+      max-height: 500px;
 
+      p {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
     margin: 10px 0;
 
     &_title {
       padding: 5px 10px;
     }
 
-    h2{
+    h2 {
       @include font(13px, 600);
     }
 
@@ -71,6 +80,6 @@
     &_content {
       @include font(12px, 400);
     }
- }
+  }
 }
 

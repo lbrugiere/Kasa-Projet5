@@ -14,7 +14,7 @@ export default function Lodging() {
     const lodging = lodgings.find(lodging => lodging.id === id);
 
     const tags = lodging?.tags.map((tag) => {
-        return <Tag key={tag} name={tag} />
+        return <Tag key={tag} name={tag} />;
     });
 
     const equipments = lodging?.equipments.map((equipment) => {
@@ -24,7 +24,7 @@ export default function Lodging() {
     });
 
     if (!lodging) {
-        return < Navigate to="/error"/>
+        return < Navigate to="/error"/>;
     } 
 
     return (

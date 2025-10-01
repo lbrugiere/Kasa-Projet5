@@ -6,5 +6,5 @@ export default function Host (props) {
             <p>{props.name}</p>
             <img src={props.picture} alt="Propriétaire" />
         </div>
-    )
+    );
 }

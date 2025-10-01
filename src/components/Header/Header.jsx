@@ -1,6 +1,6 @@
-import logo from '../../assets/logos/LOGO.png';
-import './Header.scss';
-import { NavLink } from 'react-router-dom';
+import logo from "../../assets/logos/LOGO.png";
+import "./Header.scss";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return (

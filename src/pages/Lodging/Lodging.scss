@@ -1,81 +1,81 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 .info {
-    display: grid;
-    grid-template-columns: 1fr auto; 
-    gap: 20px;
-    margin: 30px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  margin: 30px 0;
 
-    .description-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; 
-      }
-    
-    .host-rate {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; 
-        align-items: flex-end;          
-    }
+  .description-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .host-rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  h2 {
+    @include font(36px, 500);
+
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    @include font(18px, 500);
+  }
+
+  .tag {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px 0 0;
 
     h2 {
-        @include font(36px, 500);
-        color: $primary-color;
-        margin-bottom: 10px;
+      @include font(18px, 500);
+
+      margin-bottom: 5px;
     }
 
     p {
-        @include font(18px, 500);
+      @include font(14px, 500);
+    }
+
+    .description-info {
+      justify-content: flex-start;
+    }
+
+    .host-rate {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
     }
 
     .tag {
-        display: flex;
-        gap: 10px;
-        margin-top: 15px;
+      margin-top: 10px;
     }
-
-    @media (max-width: 375px) {
-
-          display: flex;
-          flex-direction: column;
-          gap: 10px; 
-          margin: 5px 0 0 0;
-
-          h2{
-            @include font(18px, 500);
-            margin-bottom: 5px;
-          }
-
-          p {
-            @include font(14px,500);
-          }
-      
-          .description-info {
-            justify-content: flex-start;
-          }
-      
-          .host-rate {
-            flex-direction: row-reverse;          
-            justify-content: space-between; 
-            align-items: center;   
-            margin-bottom: 5px;      
-          }
-      
-          .tag {
-            margin-top: 10px; 
-          }
-        
-      }
+  }
 }
 
 .collapse-container {
-    display: flex;
-    gap: 70px;
+  display: flex;
+  gap: 70px;
 
-    @media (max-width:375px) {
-        flex-direction: column;
-        gap: 0;
-    }
+  @media (max-width: 375px) {
+    flex-direction: column;
+    gap: 0;
+  }
 }

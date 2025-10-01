@@ -14,8 +14,8 @@ export default function Collapse({ title , content }) {
                 className={`fa-solid fa-chevron-up ${isOpen ? "rotate" : ""}`}></i>
             </div>
             <div className={`collapse_content ${isOpen ? "open" : ""}`}>
-            {isOpen && <p>{content}</p>}
+            <p>{content}</p>
             </div>
         </div>
-    )
+    );
 }

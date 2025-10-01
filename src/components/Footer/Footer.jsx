@@ -1,5 +1,5 @@
-import logo from '../../assets/logos/LOGO-footer.png';
-import './Footer.scss';
+import logo from "../../assets/logos/LOGO-footer.png";
+import "./Footer.scss";
 
 export default function Footer() {
     return (

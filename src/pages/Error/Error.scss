@@ -1,49 +1,55 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 .error-container {
-    @include flex-column;
-    align-items: center;
-    gap: 110px;
-    margin-bottom: 50px;
+  @include flex-column;
+
+  align-items: center;
+  gap: 110px;
+  margin-bottom: 50px;
+
+  h2 {
+    @include font(230px, 700);
+
+    color: $primary-color;
+  }
+
+  p {
+    @include font(36px, 500);
+
+    color: $primary-color;
+  }
+
+  a {
+    @include font(18px, 500);
+
+    color: $tertiary-color;
+  }
+
+  .mobile-br {
+    display: none;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 100px;
+    margin-bottom: 100px;
 
     h2 {
-        @include font(230px, 700);
-        color: $primary-color;
+      @include font(96px, 700);
     }
 
     p {
-        @include font(36px, 500);
-        color: $primary-color;
+      @include font(18px, 500);
+
+      text-align: center;
     }
 
-    a{
-        @include font(18px, 500);
-        color: $tertiary-color;
+    a {
+      @include font(14px, 500);
     }
 
     .mobile-br {
-        display: none;
+      display: inline;
     }
-
-    @media (max-width: 375px) {
-        margin-top: 100px;
-        margin-bottom: 100px;
-        h2 {
-            @include font(96px, 700);
-        }
-
-        p {
-            @include font(18px, 500);
-            text-align: center;
-        }
-
-        a {
-            @include font(14px, 500);
-        }
-
-        .mobile-br {
-            display: inline;
-        }
-    }
+  }
 }

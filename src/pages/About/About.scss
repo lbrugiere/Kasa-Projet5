@@ -1,21 +1,20 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 .container-about {
-    padding: 8px 60px;
-    margin: 30px 0 30px 0;
-    
+  padding: 8px 60px;
+  margin: 30px 0;
+
+  > * + * {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0;
+    margin: 15px 0 10px;
+
     > * + * {
-        margin-top: 30px; 
-      }
-
-    @media (max-width:375px) {
-        padding: 0;
-        margin: 15px 0 10px 0;
-
-        > * + * {
-            margin-top: 15px; 
-          };
+      margin-top: 15px;
     }
-
+  }
 }

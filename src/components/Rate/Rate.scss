@@ -1,15 +1,15 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 .rate-container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 
-    @media (max-width:375px) {
-        gap: 6px;
+  @media (max-width: 375px) {
+    gap: 6px;
 
-        img {
-            width: 16px;
-        }
+    img {
+      width: 16px;
     }
+  }
 }
