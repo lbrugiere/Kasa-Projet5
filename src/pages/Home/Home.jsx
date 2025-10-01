@@ -8,7 +8,7 @@ import '../Home/Home.scss';
 export default function Home() {
     return (
         <>
-        <Banner  text='Chez vous, partout et ailleurs' image={imgHomeBanner} />
+        <Banner text='Chez vous, partout et ailleurs' image={imgHomeBanner} />
         <section className='cards-container'>
             {lodgings.map((appart)=>(
                 <div className='card_log' key= {appart.id}>

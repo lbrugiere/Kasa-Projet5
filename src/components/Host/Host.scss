@@ -22,7 +22,8 @@
     @media (max-width:375px) {
         p {
             @include font(12px, 500);
-            max-width: 50px;
+            max-width: 60px;
+            line-height: 1,1;
         }
 
         img {
