@@ -19,7 +19,7 @@ export default function Carrousel({slides}) {
             {slides.length > 1 && (
               <i onClick={prevSlide} className="fa-solid fa-chevron-left"></i>  
             )}
-            {slides.length >1 && (
+            {slides.length> 1 && (
                 <i onClick={nextSlide} className="fa-solid fa-chevron-right"></i>
             )}
         </div>
